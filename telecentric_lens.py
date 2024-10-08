@@ -69,6 +69,6 @@ index = 3.416
 f = Dual_lens(640, 800)
 lens1 = One_surface_hyperb(f[0],index)
 lens2 = One_surface_hyperb(f[1],index)
-# %%
 print(lens1,'\n',lens2)
 # %%
+
