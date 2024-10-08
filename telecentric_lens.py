@@ -50,9 +50,25 @@ def One_surface_hyperb(f,n):
                   'f': f,
                   'n': n}
     return zemax_lens
+# spheric lens
+def One_surface_sphere(f,n):
+    R = f*(n-1)
+    zemax_lens = {'k': 0,
+                  'R': R,
+                  'f': f,
+                  'n': n}
+    return zemax_lens
 
 def Dual_lens(f_eff, L):
     f2 = L
-    
-    
-    
+    f1 = f_eff*(L-1)/(L-f_eff)
+    return f1, f2
+
+#%%    
+index = 3.416
+f = Dual_lens(640, 800)
+lens1 = One_surface_hyperb(f[0],index)
+lens2 = One_surface_hyperb(f[1],index)
+# %%
+print(lens1,'\n',lens2)
+# %%
