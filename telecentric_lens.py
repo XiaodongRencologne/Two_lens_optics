@@ -108,13 +108,13 @@ def Dual_lens(f_eff, L):
     return f1, f2
 
 #%%    
-index = 3.416
+index = 1.525#3.416
 f = Dual_lens(640, 800)
 lens1 = hyperbolic_plano_lens(f[0],index)
 lens2 = hyperbolic_plano_lens(f[1],index)
 print(lens1,'\n',lens2)
 # %%
-
+"""
 lens3 = plano_surf_lens(f[0],index,1,D_size=400,poly_order = 20)
 # %%
 lens3
@@ -129,3 +129,4 @@ plt.plot(y,x*50)
 plt.axis('equal')
 plt.show()
 # %%
+"""
