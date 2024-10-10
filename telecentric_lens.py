@@ -13,7 +13,7 @@ The input parameters:
 Formula:
 a. f_eff = F/# * D   effective focal length
    
-   1/f_eff = 1/f1 + 1/f2 -1/f1f2
+   1/f_eff = 1/f1 + 1/f2 -L/f1f2
 
 b. conic surface (ideally)
    
@@ -104,13 +104,13 @@ def Double_surf_lens(f,n):
 
 def Dual_lens(f_eff, L):
     f2 = L
-    f1 = f_eff*(L-1)/(L-f_eff)
+    f1 = None
     return f1, f2
 
 #%%    
-index = 1.525#3.416
-f = Dual_lens(640, 800)
-lens1 = hyperbolic_plano_lens(f[0],index)
+index = 1.525#3.416 #
+f = Dual_lens(640, 640)
+lens1 = hyperbolic_plano_lens(2*f[1],index)
 lens2 = hyperbolic_plano_lens(f[1],index)
 print(lens1,'\n',lens2)
 # %%
