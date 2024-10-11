@@ -97,7 +97,6 @@ def plano_surf_lens(f,n,tc,
 def Double_surf_lens(f,n):
     pass
 
-
 # 2.  calculate the required focal length of the 
 # two-lens system, with constraint of separation distance
 # of the lenses is equial to f2
