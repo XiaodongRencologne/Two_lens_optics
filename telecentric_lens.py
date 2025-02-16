@@ -107,10 +107,11 @@ def Dual_lens(f_eff, L):
     return f1, f2
 
 #%%    
-index = 1.525#3.416 #
+index = 3.36 #1.525#3.416 #
 f = Dual_lens(640, 640)
 lens1 = hyperbolic_plano_lens(2*f[1],index)
 lens2 = hyperbolic_plano_lens(f[1],index)
+lens3 = hyperbolic_plano_lens(800,)
 print(lens1,'\n',lens2)
 # %%
 """
